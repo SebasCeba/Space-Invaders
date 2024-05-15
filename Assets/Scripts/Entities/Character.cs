@@ -12,7 +12,6 @@ public abstract class Character : MonoBehaviour, IDamageable
 
     public int StartingHealth; 
 
-
     public abstract void Attack(); 
 
     public abstract void Die();
@@ -32,19 +31,23 @@ public abstract class Character : MonoBehaviour, IDamageable
         transform.rotation = Quaternion.Euler(0, 0, angleToRotate - 90); 
     }
 
-    public void ReceiveDamage()
+    //public void EnemyBulletDamage()
+    //{
+    //    //I'll work on this
+
+    //}
+
+    public void PlayerReceiveDamage(int damage)
     {
-        if (healthPoints == null)
-        {
-            Debug.Log("Who are you gonna call...Ghostbusters");
-        }
-        healthPoints.RecieveDamage();
+        //This will be for the enemy doing damage to the player 
+        healthPoints.PlayerReceiveDamage(damage);
     }
 
-    public void ReceiveDamage(int damage)
+    public void EnemyReceiveDamage(int damage)
     {
-        Debug.Log("Why aren't you working!");
-        healthPoints.RecieveDamage(damage);
+        //This player references the prefab of the bullet and the damage it does to the enemy 
+        Debug.Log("The enemy has been hit");
+        healthPoints.EnemyReceiveDamage(damage);
     }
 
     public Character() 

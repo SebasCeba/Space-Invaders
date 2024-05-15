@@ -60,9 +60,10 @@ public class Player : Character, IDamageable
 
     public override void Attack()
     {
+        //Player input decides when the bullet is shoot 
         playerWeapon.ShootMe(aim.position, aim.rotation, "Enemy");
-
     }
+
     public override void Die()
     {
         GameManager.singleton.EndGame(); 

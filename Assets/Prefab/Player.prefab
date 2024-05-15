@@ -155,8 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   rigidbody: {fileID: 3380698236376813392}
+  StartingHealth: 0
   aim: {fileID: 813307534}
-  bulletPrefab: {fileID: 1326015522919973969, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+  playerWeapon: {fileID: 0}
+  _healthText: {fileID: 0}
 --- !u!114 &3380698236376813396
 MonoBehaviour:
   m_ObjectHideFlags: 0

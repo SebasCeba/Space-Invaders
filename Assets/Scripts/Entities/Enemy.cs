@@ -7,7 +7,10 @@ public class Enemy : Character
     [SerializeField] private float attackdistance; 
     private Player target;
 
-    [SerializeField] public float time; 
+    [SerializeField] public float time;
+
+    //This will be the amount of damage it does to the player 
+    public int damage;
 
     public void SetUpEnemy(int healthParam)
     {
@@ -16,15 +19,17 @@ public class Enemy : Character
         healthPoints.OneHealthChanged.AddListener(ChangedHealth);
     }
 
-    public void ChangedHealth(int health)
+    private void ChangedHealth(int health)
     {
         Debug.Log("Enemy life has changed " + health);
 
         if (health <= 0)
         {
+            Debug.Log("I'm dying");
             Die(); 
         }
     }
+
     public void FixedUpdate()
     {
         if(target != null)
@@ -38,7 +43,7 @@ public class Enemy : Character
 
     public override void Move(Vector2 direction, float angle)
     {
-        //Ifi distance from target is lesser than attackdistance
+        //If distance from target is lesser than attackdistance
         if (Vector2.Distance(target.transform.position, transform.position) > attackdistance)
         {
             base.Move(direction, angle);
@@ -49,17 +54,17 @@ public class Enemy : Character
 
             if (time >= 0.5f)
             {
-                target.ReceiveDamage();
-                time = 0f; 
+                target.PlayerReceiveDamage(damage);
+                time = 0f;
+                Debug.Log("I'm hitting the player"); 
             } 
-
             rigidbody.velocity = Vector2.zero;
         }
     }
 
     public override void Attack()
     {
-        target.ReceiveDamage();
+        target.PlayerReceiveDamage(damage);
     }
 
     public override void Die()

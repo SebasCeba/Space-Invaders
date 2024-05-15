@@ -72,23 +72,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 296757693174133948, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
   m_PrefabInstance: {fileID: 4602188450664817876}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1544096787414100317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4305451756122935400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd64038b504feef419f6529ae965fbe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  rigidbody: {fileID: 4305451756122935402}
-  attackdistance: 1.5
-  time: 0.8
-  enemyWeapon: {fileID: 11400000, guid: f28475f80f780d347b7ed127872e08af, type: 2}
 --- !u!61 &858764173295866563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,6 +98,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1544096787414100317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305451756122935400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd64038b504feef419f6529ae965fbe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rigidbody: {fileID: 4305451756122935402}
+  StartingHealth: 8
+  attackdistance: 1.5
+  time: 0.8
+  damage: 3
+  enemyWeapon: {fileID: 11400000, guid: f28475f80f780d347b7ed127872e08af, type: 2}
 --- !u!50 &4305451756122935402 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 296757693174133950, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}

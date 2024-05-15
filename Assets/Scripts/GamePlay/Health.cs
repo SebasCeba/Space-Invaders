@@ -7,23 +7,22 @@ using UnityEngine.Events;
 
 public class Health 
 {
-    public int currentHealth;
+    private int currentHealth;
     public UnityEvent<int> OneHealthChanged; 
 
-    public void RecieveDamage()
+    public void PlayerReceiveDamage(int damage)
     {
-        currentHealth -= 1;
-
+        currentHealth -= damage;
+        Debug.Log("Am I dying?");
         OneHealthChanged.Invoke(currentHealth);
 
     }
 
-    public void RecieveDamage(int damage)
+    public void EnemyReceiveDamage(int damage)
     {
         currentHealth -= damage;
-
+        Debug.Log("This should be called");
         OneHealthChanged.Invoke(currentHealth);
-
     }
 
     //public void RecieveDamage(int explosive)

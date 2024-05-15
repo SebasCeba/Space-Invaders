@@ -31,8 +31,15 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.CompareTag(targetTag))
         {
             //Do damage to enemy 
-            collision.GetComponent<IDamageable>().ReceiveDamage();
+            collision.GetComponent<IDamageable>().EnemyReceiveDamage(damage);
             Destroy(gameObject); 
+        }
+
+        if(collision.gameObject.CompareTag(targetTag))
+        {
+            //Do damage to the player 
+            collision.GetComponent<IDamageable>().PlayerReceiveDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

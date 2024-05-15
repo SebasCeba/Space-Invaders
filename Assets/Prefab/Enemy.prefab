@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 296757693174133950}
   - component: {fileID: 296757693174133951}
   - component: {fileID: 423725990}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -122,8 +122,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   rigidbody: {fileID: 296757693174133950}
+  StartingHealth: 5
   attackdistance: 0.8
   time: 0.5
+  damage: 1
 --- !u!60 &423725990
 PolygonCollider2D:
   m_ObjectHideFlags: 0

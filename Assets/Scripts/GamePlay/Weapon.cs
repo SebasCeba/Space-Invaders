@@ -22,6 +22,12 @@ public class Weapon : ScriptableObject
         temmBullet.SetUpBullet(tag, damage); 
     }
 
+    public void EnemyShoot(Vector2 position , Quaternion direction, string tag)
+    {
+        Bullet EnemytemmBullet = Object.Instantiate(bulletReference, position, direction);
+        EnemytemmBullet.SetUpBullet(tag, damage); 
+    }
+
     public Weapon()
     {
 

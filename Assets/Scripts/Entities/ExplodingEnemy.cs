@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class ExplodingEnemy : Enemy
 {
-    [SerializeField]
-    private Weapon enemyWeapon;
-
+    [SerializeField] private Weapon enemyWeapon;
     public override void Attack()
     {
-        Debug.Log("This enemy is exploding");
-
-        enemyWeapon.ShootMe(transform.position, transform.rotation, "Player");
+        enemyWeapon.EnemyShoot(transform.position, transform.rotation, "Player");
     }
+
+    //public override void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        target.ReceiveDamage(damage);
+    //    }
+    //}
 }

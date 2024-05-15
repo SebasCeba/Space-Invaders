@@ -7,6 +7,6 @@ public class ChargerEnemy : Enemy
     [SerializeField]private Weapon enemyWeapon; 
     public override void Attack()
     {
-        enemyWeapon.ShootMe(transform.position, transform.rotation, "Player");
+        enemyWeapon.EnemyShoot(transform.position, transform.rotation, "Player");
     }
 }

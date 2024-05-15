@@ -51,8 +51,9 @@ public class GameManager : MonoBehaviour
 
             Enemy randomEnemy = typesOfEnemies[Random.Range(0, typesOfEnemies.Length)];
             Enemy enemy = Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
-            enemy.SetUpEnemy(1);
             //This is for setting up the health of the enemy 
+            enemy.SetUpEnemy(5);
+            
         }
     }
 
