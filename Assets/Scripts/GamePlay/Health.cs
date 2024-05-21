@@ -7,41 +7,43 @@ using UnityEngine.Events;
 
 public class Health 
 {
-    private int currentHealth;
+
+    private int PlayerHealth;
+    private int EnemyHP; 
+
     public UnityEvent<int> OneHealthChanged; 
 
     public void PlayerReceiveDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log("Am I dying?");
-        OneHealthChanged.Invoke(currentHealth);
-
+        PlayerHealth -= damage;
+        OneHealthChanged.Invoke(PlayerHealth);
     }
 
     public void EnemyReceiveDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log("This should be called");
-        OneHealthChanged.Invoke(currentHealth);
+        EnemyHP -= damage;
+        Debug.Log("EnemyHP: " + EnemyHP);
     }
 
-    //public void RecieveDamage(int explosive)
-    //{
-    //    currentHealth -= 10;
+    public int GetCurrentHP()
+    {
+        return EnemyHP; 
+    }
 
-    //    OneHealthChanged.Invoke(currentHealth);
-    //}
-
+    public int GetPlayerHP()
+    {
+        return PlayerHealth;
+    }
 
     public void IncreaseLife()
     {
 
     }
 
-
     public Health(int maxHealth)
     {
-        currentHealth = maxHealth; 
         OneHealthChanged = new UnityEvent<int>();
+        EnemyHP = maxHealth;
+        PlayerHealth = maxHealth;
     }
 }

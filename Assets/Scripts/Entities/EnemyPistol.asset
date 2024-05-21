@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7774889807d12141afaad2b20523323, type: 3}
-  m_Name: SubMachineGun
+  m_Name: EnemyPistol
   m_EditorClassIdentifier: 
-  weaponName: SubMachineGun
+  weaponName: 
   icon: {fileID: 0}
-  bulletReference: {fileID: 1326015522919973969, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+  bulletReference: {fileID: 6738783063365140510, guid: debd90bee7258844fa474bc64f42a6a4, type: 3}
   damage: 5

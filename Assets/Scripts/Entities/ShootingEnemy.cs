@@ -5,20 +5,34 @@ using UnityEngine;
 public class ShootingEnemy : Enemy
 {
     [SerializeField] private Weapon enemyWeapon;
-    [SerializeField] private Transform aim; 
+    [SerializeField] protected float stopDistance;
+    [SerializeField] private Transform BulletSpawn; 
+    
+
+    private float timer;
+
+    private void Update()
+    {
+        Attack(); 
+    }
 
     public override void Attack()
     {
-        enemyWeapon.ShootMe(transform.position, transform.rotation, "Player");
+        timer += Time.deltaTime; 
+        if (timer > 2f)
+        {
+            enemyWeapon.EnemyShoot(BulletSpawn.position, transform.rotation, "Player");
+            timer = 0; 
+        }
     }
 
-
-    IEnumerable SpawnBullet()
+    public override void Move(Vector2 direction, float angle)
     {
-        while (10 == 10)
+        if(Vector2.Distance(target.transform.position, transform.position) > stopDistance)
         {
-            yield return new WaitForSeconds(4f); 
-
+            rigidbody.AddForce(direction.normalized * speed * Time.deltaTime * 1000f); 
         }
+
+        transform.rotation = Quaternion.Euler(0, 0 , angle -90);
     }
 }

@@ -6,10 +6,10 @@ public interface IDamageable
 { 
 
     //This is only for physical contact 
-    public void PlayerReceiveDamage(int damage);
+    public void PlayerhasTaken(int damage);
 
     //Enemy receives damage from the bullet of the player 
-    public void EnemyReceiveDamage(int damage);
+    public void EnemyReceives(int damage);
 
     //This will be for the Enemy bullet that deals damage to the player 
     //Or not 

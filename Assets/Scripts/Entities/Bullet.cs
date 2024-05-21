@@ -9,6 +9,11 @@ public class Bullet : MonoBehaviour
     private int damage;
     private string targetTag; 
 
+    public int GetDamage()
+    {
+        return damage;
+    }
+
     private void Start()
     {
         Destroy(gameObject, 5f); 
@@ -26,20 +31,8 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * bulletSpeed * fireRate * Time.deltaTime); 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag(targetTag))
-        {
-            //Do damage to enemy 
-            collision.GetComponent<IDamageable>().EnemyReceiveDamage(damage);
-            Destroy(gameObject); 
-        }
-
-        if(collision.gameObject.CompareTag(targetTag))
-        {
-            //Do damage to the player 
-            collision.GetComponent<IDamageable>().PlayerReceiveDamage(damage);
-            Destroy(gameObject);
-        }
+            Destroy(gameObject);      
     }
 }

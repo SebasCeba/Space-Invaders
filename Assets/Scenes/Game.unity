@@ -1591,6 +1591,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &1476267418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 813307534, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+  m_PrefabInstance: {fileID: 3380698235577156124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1535220916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1585614749}
   UIGamePlay: {fileID: 826966451}
+  enemies: {fileID: 0}
   typesOfEnemies:
   - {fileID: 1544096787414100317, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
   - {fileID: 296757693174133951, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
@@ -2172,6 +2178,26 @@ PrefabInstance:
     - target: {fileID: 3380698236376813403, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964325255775708471, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+      propertyPath: aim
+      value: 
+      objectReference: {fileID: 1476267418}
+    - target: {fileID: 8964325255775708471, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964325255775708471, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+      propertyPath: _healthText
+      value: 
+      objectReference: {fileID: 746991019}
+    - target: {fileID: 8964325255775708471, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+      propertyPath: playerWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 26f92757864aa8d4d9d8a5c24dfac332, type: 2}
+    - target: {fileID: 8964325255775708471, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}
+      propertyPath: StartingHealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5497c90dba5446a4d8573aa0bcf8d34a, type: 3}

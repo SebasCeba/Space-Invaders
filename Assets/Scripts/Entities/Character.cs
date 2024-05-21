@@ -37,18 +37,19 @@ public abstract class Character : MonoBehaviour, IDamageable
 
     //}
 
-    public void PlayerReceiveDamage(int damage)
+    public void PlayerhasTaken(int damage)
     {
         //This will be for the enemy doing damage to the player 
         healthPoints.PlayerReceiveDamage(damage);
     }
 
-    public void EnemyReceiveDamage(int damage)
+    public void EnemyReceives(int damage)
     {
         //This player references the prefab of the bullet and the damage it does to the enemy 
         Debug.Log("The enemy has been hit");
         healthPoints.EnemyReceiveDamage(damage);
     }
+
 
     public Character() 
     {
@@ -61,5 +62,4 @@ public abstract class Character : MonoBehaviour, IDamageable
         this.speed = speed;
         healthPoints = new Health(health); 
     }
-
 }

@@ -75,4 +75,13 @@ public class Player : Character, IDamageable
         base.Move(direction, angle);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            IDamageable damageable = GetComponent<IDamageable>();
+            damageable.PlayerhasTaken(collision.gameObject.GetComponent<Bullet>().GetDamage());
+            ChangedHealth(healthPoints.GetPlayerHP());
+        }
+    }
 }

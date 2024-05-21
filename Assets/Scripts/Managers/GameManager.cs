@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 
     public ScoreManager scoreManager;
 
-    public UIGamePlay UIGamePlay; 
+    public UIGamePlay UIGamePlay;
+
+    public Enemy enemies; 
 
     [SerializeField]
     private Enemy[] typesOfEnemies;
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnEnemy());
     }
 
-    IEnumerator SpawnEnemy()
+    public IEnumerator SpawnEnemy()
     {
         while (10 == 10)
         {
@@ -50,9 +52,9 @@ public class GameManager : MonoBehaviour
             Transform randomSpawnPoint = spawnPoints[randomIndex];
 
             Enemy randomEnemy = typesOfEnemies[Random.Range(0, typesOfEnemies.Length)];
-            Enemy enemy = Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
+            enemies = Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
             //This is for setting up the health of the enemy 
-            enemy.SetUpEnemy(5);
+            //enemies.SetUpEnemy(5);
             
         }
     }

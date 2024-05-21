@@ -1,20 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : Character
+public class Enemy : Character, IDamageable
 {
+    private GameManager _gm; 
+    [SerializeField] private float stopMovement; 
     [SerializeField] private float attackdistance; 
-    private Player target;
+   
+    protected private Player target;
 
     [SerializeField] public float time;
 
     //This will be the amount of damage it does to the player 
     public int damage;
 
+    private void OnEnable()
+    {
+        _gm = FindObjectOfType<GameManager>();
+        SetUpEnemy(StartingHealth); 
+    }
+
     public void SetUpEnemy(int healthParam)
     {
-        healthPoints = new Health(healthParam);
+        healthPoints = new Health(healthParam); 
         target = FindObjectOfType<Player>();
         healthPoints.OneHealthChanged.AddListener(ChangedHealth);
     }
@@ -27,6 +37,16 @@ public class Enemy : Character
         {
             Debug.Log("I'm dying");
             Die(); 
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            IDamageable damageable = GetComponent<IDamageable>();
+            damageable.EnemyReceives(damage);
+            ChangedHealth(healthPoints.GetCurrentHP()); 
         }
     }
 
@@ -46,6 +66,7 @@ public class Enemy : Character
         //If distance from target is lesser than attackdistance
         if (Vector2.Distance(target.transform.position, transform.position) > attackdistance)
         {
+            Debug.Log(stopMovement); 
             base.Move(direction, angle);
         }
         else //everytime the enemy is close to the player 
@@ -54,7 +75,7 @@ public class Enemy : Character
 
             if (time >= 0.5f)
             {
-                target.PlayerReceiveDamage(damage);
+                target.PlayerhasTaken(damage);
                 time = 0f;
                 Debug.Log("I'm hitting the player"); 
             } 
@@ -64,7 +85,7 @@ public class Enemy : Character
 
     public override void Attack()
     {
-        target.PlayerReceiveDamage(damage);
+        target.PlayerhasTaken(damage);
     }
 
     public override void Die()

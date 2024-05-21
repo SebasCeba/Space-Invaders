@@ -11,10 +11,10 @@ public class Weapon : ScriptableObject
     [SerializeField]
     private Sprite icon;
     [SerializeField]
-    private int damage;
-    [SerializeField]
     private Bullet bulletReference;
 
+    [SerializeField]
+    private int damage;
 
     public void ShootMe(Vector2 position, Quaternion direction, string tag)
     {

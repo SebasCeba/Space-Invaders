@@ -15,6 +15,18 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4514419206854255471, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+      propertyPath: m_Color.b
+      value: 0.24563903
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514419206854255471, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+      propertyPath: m_Color.g
+      value: 0.30575398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514419206854255471, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+      propertyPath: m_Color.r
+      value: 0.754717
+      objectReference: {fileID: 0}
     - target: {fileID: 7627920309696259783, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -62,6 +74,14 @@ PrefabInstance:
     - target: {fileID: 8935636228390436567, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
       propertyPath: m_Name
       value: Enemy Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935636228390436567, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935636228390436567, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+      propertyPath: m_TagString
+      value: EnemyBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
