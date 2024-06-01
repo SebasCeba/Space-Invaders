@@ -10,7 +10,7 @@ public abstract class Character : MonoBehaviour, IDamageable
 
     [SerializeField] protected new Rigidbody2D rigidbody;
 
-    public int StartingHealth; 
+    public int HPStart; 
 
     public abstract void Attack(); 
 
@@ -18,7 +18,7 @@ public abstract class Character : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        healthPoints = new Health(StartingHealth);
+        healthPoints = new Health(HPStart);
     }
     public virtual void SetWeapon(Weapon newWeapon)
     {
@@ -30,13 +30,6 @@ public abstract class Character : MonoBehaviour, IDamageable
         rigidbody.AddForce(direction.normalized * speed * Time.deltaTime * 500f);
         transform.rotation = Quaternion.Euler(0, 0, angleToRotate - 90); 
     }
-
-    //public void EnemyBulletDamage()
-    //{
-    //    //I'll work on this
-
-    //}
-
     public void PlayerhasTaken(int damage)
     {
         //This will be for the enemy doing damage to the player 

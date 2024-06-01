@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Enemy : Character, IDamageable
 {
+    [Header("---Audio Source---")]
+    [SerializeField] AudioSource deathSfx;
+
+    [Header("---Stats---")]
     private GameManager _gm; 
     [SerializeField] private float stopMovement; 
     [SerializeField] private float attackdistance; 
@@ -19,7 +23,7 @@ public class Enemy : Character, IDamageable
     private void OnEnable()
     {
         _gm = FindObjectOfType<GameManager>();
-        SetUpEnemy(StartingHealth); 
+        SetUpEnemy(HPStart); 
     }
 
     public void SetUpEnemy(int healthParam)
@@ -66,7 +70,6 @@ public class Enemy : Character, IDamageable
         //If distance from target is lesser than attackdistance
         if (Vector2.Distance(target.transform.position, transform.position) > attackdistance)
         {
-            Debug.Log(stopMovement); 
             base.Move(direction, angle);
         }
         else //everytime the enemy is close to the player 

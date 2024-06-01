@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour 
 {
     public float bulletSpeed;
-    public float fireRate; 
     private int damage;
-    private string targetTag; 
+    private string targetTag;
+
 
     public int GetDamage()
     {
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     public void Update()
     {
         //Just moving forward 
-        transform.Translate(Vector2.up * bulletSpeed * fireRate * Time.deltaTime); 
+        transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

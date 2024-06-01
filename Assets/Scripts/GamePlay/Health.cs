@@ -7,8 +7,12 @@ using UnityEngine.Events;
 
 public class Health 
 {
-
+    [Header("Player's Health")]
     private int PlayerHealth;
+    //This was added
+    public int maxHealth = 100;
+
+    [Header("Enemy Health")]
     private int EnemyHP; 
 
     public UnityEvent<int> OneHealthChanged; 
@@ -30,14 +34,14 @@ public class Health
         return EnemyHP; 
     }
 
+    public void SetCurrentHP(int health)
+    {
+        PlayerHealth = health; 
+    }
+
     public int GetPlayerHP()
     {
         return PlayerHealth;
-    }
-
-    public void IncreaseLife()
-    {
-
     }
 
     public Health(int maxHealth)

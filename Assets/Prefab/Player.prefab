@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  m_Color: {r: 0.3121097, g: 0.6792453, b: 0.2787469, a: 1}
+  m_Color: {r: 0.44705886, g: 0.44705886, b: 0.44705886, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -154,8 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5fa8d9c21d10e1419a3e16cd05bbbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSrc: {fileID: 0}
   direction: {x: 0, y: 0}
   angleToRotate: 0
+  fireRate: 0
 --- !u!114 &8964325255775708471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,10 +172,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rigidbody: {fileID: 3380698236376813392}
-  StartingHealth: 50
+  HPStart: 0
   aim: {fileID: 3380698236653444496}
   playerWeapon: {fileID: 0}
   _healthText: {fileID: 0}
+  timer: 0
 --- !u!61 &3482653335586787511
 BoxCollider2D:
   m_ObjectHideFlags: 0

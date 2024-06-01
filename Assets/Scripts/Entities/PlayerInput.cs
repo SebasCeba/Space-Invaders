@@ -5,9 +5,14 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    [Header("---Movement + Aim---")]
     private Player myPlayer;
     public Vector2 direction;
     public float angleToRotate;
+
+    [Header("---Bullet's Stats---")]
+    public float fireRate;
+    private float fireTimer;
 
 
     // Start is called before the first frame update
@@ -18,11 +23,17 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && fireTimer <= 0f)
         {
             myPlayer.Attack();
+            fireTimer = fireRate; 
+        }
+        else
+        {
+            fireTimer -= Time.deltaTime;
         }
     }
+
 
     // Update is called once per frame
     void FixedUpdate()

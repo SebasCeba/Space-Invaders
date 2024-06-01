@@ -5,17 +5,23 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ExplodingEnemy : Enemy
 {
-    [SerializeField] private Weapon enemyWeapon;
+    public int Explodingdamage;
+
     public override void Attack()
     {
-        enemyWeapon.EnemyShoot(transform.position, transform.rotation, "Player");
+        base.Attack();
     }
 
-    //public override void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        target.ReceiveDamage(damage);
-    //    }
-    //}
+    public new void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            if(player != null)
+            {
+                player.PlayerhasTaken(Explodingdamage);
+            }
+                Destroy(this.gameObject);
+        }
+    }
 }

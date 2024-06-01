@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: SubMachineGun
   icon: {fileID: 0}
-  bulletReference: {fileID: 1326015522919973969, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
+  bulletReference: {fileID: 5734802423308558225, guid: fe9bda448c2d1784db6e26dcb5631dd7, type: 3}
   damage: 5
