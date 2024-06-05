@@ -7,6 +7,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1629928374053781426, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: droppedItemPrefab
+      value: 
+      objectReference: {fileID: 9220470880872089424, guid: 6e06ff30099cd04489ba89188ac09df4, type: 3}
+    - target: {fileID: 1629928374053781426, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: lootList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629928374053781426, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: lootList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f80e6454927cf64b95b94e0eadfd8f5, type: 2}
+    - target: {fileID: 1629928374053781426, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: lootList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f80e6454927cf64b95b94e0eadfd8f5, type: 2}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.53048867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].value
+      value: 0.018286735
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope
+      value: 1.4127375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].inSlope
+      value: -0.8725128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.34678397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outSlope
+      value: 1.4127375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].inWeight
+      value: 0.2578931
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555089704286046864, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].outSlope
+      value: -0.8725128
+      objectReference: {fileID: 0}
     - target: {fileID: 4305451756122935400, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
       propertyPath: m_Name
       value: Exploding Enemy
@@ -75,15 +127,18 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5567680771440197902, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: afb0cbcacf66eee48ab4271ed179c209, type: 3}
+    - target: {fileID: 5567680771440197902, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1544096787414100317, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
     - {fileID: 4640387044756157464, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
---- !u!82 &2395467878747688470 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5567680771440197902, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
-  m_PrefabInstance: {fileID: 7816570486940897048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6321366118873177968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4305451756122935400, guid: 2cbee0912bf94c24fa9f57d829b23c4b, type: 3}
@@ -104,7 +159,7 @@ MonoBehaviour:
   speed: 5
   rigidbody: {fileID: 6321366118873177970}
   HPStart: 5
-  deathSfx: {fileID: 2395467878747688470}
+  deathsfx: {fileID: 8300000, guid: afb0cbcacf66eee48ab4271ed179c209, type: 3}
   stopMovement: 0
   attackdistance: 0
   time: 0.5

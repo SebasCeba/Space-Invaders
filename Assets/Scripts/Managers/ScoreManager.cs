@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         singleton = this;
+        totalScore = 0;
     }
 
     private void Start()

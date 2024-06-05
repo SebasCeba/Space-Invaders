@@ -186,6 +186,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootingEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1087919813176263368, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.121952295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.4085328
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].value
+      value: 0.16463488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: droppedItemPrefab
+      value: 
+      objectReference: {fileID: 8770584958461692353, guid: 8489ba0a27cf80549a6cce8163a72321, type: 3}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: df12c1f932f46134b9dc8332af71d4de, type: 2}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: df12c1f932f46134b9dc8332af71d4de, type: 2}
     m_RemovedComponents:
     - {fileID: 296757693174133951, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
@@ -214,7 +246,7 @@ MonoBehaviour:
   speed: 1.5
   rigidbody: {fileID: 5056018629383968896}
   HPStart: 8
-  deathSfx: {fileID: 5561326399333691126}
+  deathsfx: {fileID: 8300000, guid: afb0cbcacf66eee48ab4271ed179c209, type: 3}
   stopMovement: 20
   attackdistance: 10
   time: 2
@@ -225,10 +257,5 @@ MonoBehaviour:
 --- !u!4 &5056018629383968902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 296757693174133944, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
-  m_PrefabInstance: {fileID: 4770681633817914430}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &5561326399333691126 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1087919813176263368, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
   m_PrefabInstance: {fileID: 4770681633817914430}
   m_PrefabAsset: {fileID: 0}

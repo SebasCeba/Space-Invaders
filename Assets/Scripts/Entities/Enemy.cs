@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Enemy : Character, IDamageable
 {
-    [Header("---Audio Source---")]
-    [SerializeField] AudioSource deathSfx;
+    public AudioClip deathsfx;
 
     [Header("---Stats---")]
     private GameManager _gm; 
@@ -51,6 +50,7 @@ public class Enemy : Character, IDamageable
             IDamageable damageable = GetComponent<IDamageable>();
             damageable.EnemyReceives(damage);
             ChangedHealth(healthPoints.GetCurrentHP()); 
+            Explode();
         }
     }
 
@@ -93,8 +93,29 @@ public class Enemy : Character, IDamageable
 
     public override void Die()
     {
+        //Instantiate loot/Power ups 
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         //Increse score 
+        GameManager.singleton.EnemyKilled(this); 
         GameManager.singleton.scoreManager.IncreaseScore();
         Destroy(gameObject); //Dies 
+    }
+
+    private void Explode()
+    {
+        if(deathsfx != null)
+        {
+            PlaySound(deathsfx);
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        GameObject soundObject = new GameObject("ExplosionSound");
+        AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        Destroy(soundObject, clip.length);
     }
 }

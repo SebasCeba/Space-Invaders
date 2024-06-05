@@ -75,6 +75,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charger
       objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.33604836
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].time
+      value: 0.73171335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.5243928
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065958775100173892, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].value
+      value: 0.26828784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: droppedItemPrefab
+      value: 
+      objectReference: {fileID: 8770584958461692353, guid: 8489ba0a27cf80549a6cce8163a72321, type: 3}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: df12c1f932f46134b9dc8332af71d4de, type: 2}
+    - target: {fileID: 2972632195279493990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
+      propertyPath: lootList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: df12c1f932f46134b9dc8332af71d4de, type: 2}
     m_RemovedComponents:
     - {fileID: 296757693174133951, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
     - {fileID: 423725990, guid: d1b08afab6857754cbbe6ca80687351b, type: 3}
@@ -102,102 +134,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.03332448}
   serializedVersion: 2
   m_Radius: 0.7866756
---- !u!82 &5567680771440197902
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4305451756122935400}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1544096787414100317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +149,7 @@ MonoBehaviour:
   speed: 3
   rigidbody: {fileID: 4305451756122935402}
   HPStart: 10
-  deathSfx: {fileID: 5567680771440197902}
+  deathsfx: {fileID: 8300000, guid: afb0cbcacf66eee48ab4271ed179c209, type: 3}
   stopMovement: 0
   attackdistance: 1.5
   time: 0.8

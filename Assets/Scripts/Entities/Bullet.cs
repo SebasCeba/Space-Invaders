@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour 
+public class Bullet : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource bulletSfx; 
+
     public float bulletSpeed;
     private int damage;
     private string targetTag;
@@ -23,16 +26,19 @@ public class Bullet : MonoBehaviour
     {
         damage = damageParam;
         targetTag = tag;
+        //Plays the sound 
+        bulletSfx.Play();
     }
 
     public void Update()
     {
+
         //Just moving forward 
         transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            Destroy(gameObject);      
+        Destroy(gameObject);      
     }
 }

@@ -70,7 +70,11 @@ public class Player : Character, IDamageable
             Die(); 
         }
     }
-
+    public Weapon GetCurrentWeapon()
+    {
+        //Stores the weapon that I equiped previously
+        return playerWeapon; 
+    }
     public override void SetWeapon(Weapon newWeapon)
     {
         base.SetWeapon(newWeapon);
@@ -99,7 +103,6 @@ public class Player : Character, IDamageable
             ChangedHealth(healthPoints.GetPlayerHP());
         }
     }
-
     private IEnumerator HealthRegen()
     {
         isCoroutineRunning = true;

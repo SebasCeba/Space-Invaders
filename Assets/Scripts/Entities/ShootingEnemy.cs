@@ -21,7 +21,14 @@ public class ShootingEnemy : Enemy
         timer += Time.deltaTime; 
         if (timer > 2f)
         {
-            enemyWeapon.EnemyShoot(BulletSpawn.position, transform.rotation, "Player");
+            if(target != null)
+            {
+                enemyWeapon.EnemyShoot(BulletSpawn.position, transform.rotation, "Player");
+            }
+            else
+            {
+                
+            }
             timer = 0; 
         }
     }

@@ -16,7 +16,7 @@ public class UIGamePlay : MonoBehaviour
     //Reference to this screen "game over" 
     public GameObject _deathScreen;
 
-    public static UIGamePlay Instance; 
+    public static UIGamePlay Instance;
 
     private void Start()
     {
@@ -35,11 +35,12 @@ public class UIGamePlay : MonoBehaviour
 
     public void UpdateTotalScore()
     {
-        _HighScore.text = "Total Score: " + ScoreManager.singleton.GetScore().ToString();
+        _totalScoreText.text = "Score: " + ScoreManager.singleton.GetScore().ToString();
     }
 
     public void UpdateHighScore()
     {
-        _totalScoreText.text = "High Score: " + ScoreManager.singleton.GetHigh().ToString();
+        _HighScore.text = "High Score: " + ScoreManager.singleton.GetHigh().ToString();
+        
     }
 }

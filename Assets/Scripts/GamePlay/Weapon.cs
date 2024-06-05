@@ -8,7 +8,6 @@ using UnityEngine;
 public class Weapon : ScriptableObject
 {
     //[Header("---Audio Source---")]
-    //[SerializeField] AudioSource source; 
     //[SerializeField] AudioClip bulletSfx;
 
     [Header("---Weapon---")]

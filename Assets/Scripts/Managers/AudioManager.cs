@@ -11,10 +11,14 @@ public class AudioManager : MonoBehaviour
     [Header("----Audio Source----")]
     [SerializeField] AudioSource musicSource;
 
-    [Header("----Audio Clips----")]
-    public AudioClip[] Tracks;
+    [Header("----Audio BackgroundMusicClips----")]
+    public AudioClip[] Tracks; //Tracks 2, 3, 4, 6, 8
+
+    [Header("----Audio GameOverMusicClips----")]
+    public AudioClip[] gameOverTracks; 
 
     private int currentTrackIndex = 0;
+    private bool isGameOver = false; 
 
     private void Start()
     {
@@ -40,5 +44,26 @@ public class AudioManager : MonoBehaviour
         currentTrackIndex = (currentTrackIndex + 1) % Tracks.Length; 
         PlayTrack(currentTrackIndex);
 
+    }
+
+    public void PlayGameOverMusic()
+    {
+        StopAllCoroutines(); //To stop any tracks that would've been playing during the game 
+
+        if(gameOverTracks.Length > 0)
+        {
+            int index = Random.Range(0, gameOverTracks.Length);
+            musicSource.clip = gameOverTracks[index];
+            musicSource.Play();
+            isGameOver = true; 
+        }
+    }
+
+    public void ResetAudio()
+    {
+        isGameOver = false;
+        currentTrackIndex = 0;
+        StopAllCoroutines();
+        PlayTrack(currentTrackIndex);
     }
 }

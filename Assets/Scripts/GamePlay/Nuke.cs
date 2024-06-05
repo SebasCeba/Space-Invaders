@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nuke : MonoBehaviour
+public class Nuke : PickUp
 {
     public AudioClip nukeSfx; 
     //This shall be the radius of the explosion 
     public float explosionRadius = 5f;
 
+
+    private void Start()
+    {
+        Destroy(gameObject, 5f); 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
