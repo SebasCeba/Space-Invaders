@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25414eb6453ccfc49beb14be98c88ad1, type: 3}
   m_Name: SubMachine
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300002, guid: 34117c1e0c2d27d43973517e619028e5, type: 3}
+  lootSprite: {fileID: 21300000, guid: 3e3b0924f7cd2cf4c8e1205e3e2f9044, type: 3}
   lootName: SubMachineGun
-  dropChance: 25
+  dropChance: 100

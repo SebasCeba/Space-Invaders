@@ -7,14 +7,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon" , menuName = " Create Weapon")]
 public class Weapon : ScriptableObject
 {
-    //[Header("---Audio Source---")]
-    //[SerializeField] AudioClip bulletSfx;
-
     [Header("---Weapon---")]
     [SerializeField]
     private string weaponName;
     [SerializeField]
     private Sprite icon;
+    public Sprite weaponSprite; 
 
     [Header("---Bullet---")]
     [SerializeField]
@@ -24,12 +22,6 @@ public class Weapon : ScriptableObject
 
     public void ShootMe(Vector2 position, Quaternion direction, string tag)
     {    
-        //if(bulletSfx == null)
-        //{
-        //    Debug.LogWarning("Sound effect not assigned");
-        //}
-        //source.clip = bulletSfx;
-        //source.Play();
         Bullet temmBullet = Object.Instantiate(bulletReference, position, direction);
         temmBullet.SetUpBullet(tag, damage); 
     }

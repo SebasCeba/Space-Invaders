@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 632285169556790819}
   - component: {fileID: 1430142571282643017}
   - component: {fileID: 8939940923146088781}
-  - component: {fileID: 6886894042109168038}
+  - component: {fileID: 1715802469070015932}
   m_Layer: 0
   m_Name: SubMachineGun Weapon Change
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8770584958461692353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.25, y: 1.8084952, z: 0}
-  m_LocalScale: {x: 4.425604, y: 4.174123, z: 3.3062358}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newWeapon: {fileID: 11400000, guid: f28475f80f780d347b7ed127872e08af, type: 2}
   weaponChangeDuration: 5
+  spriteRendererObject: {fileID: 8770584958461692353}
 --- !u!212 &8939940923146088781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 34117c1e0c2d27d43973517e619028e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e3b0924f7cd2cf4c8e1205e3e2f9044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +101,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &6886894042109168038
-CapsuleCollider2D:
+--- !u!61 &1715802469070015932
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114,5 +115,15 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.37}
-  m_Direction: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.088, y: 0.718}
+    newSize: {x: 0.16, y: 0.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.088, y: 0.718}
+  m_EdgeRadius: 0

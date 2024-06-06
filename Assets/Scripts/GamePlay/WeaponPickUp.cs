@@ -9,12 +9,21 @@ public class WeaponPickUp : PickUp
     [SerializeField]
     private float weaponChangeDuration;
 
-    //[SerializeField]
-    //private GameObject SpriteRanderer = null;
+    [SerializeField]
+    private GameObject spriteRendererObject = null;
+    //private SpriteRenderer spriteRenderer; 
 
     private void Start()
     {
-        Destroy(gameObject, 10f); 
+        Destroy(gameObject, 10f);
+        //if (spriteRendererObject != null)
+        //{
+        //    spriteRenderer = spriteRendererObject.GetComponent<SpriteRenderer>();
+        //}
+        //else
+        //{
+        //    Debug.LogError("SpriteRendererObject is not assigned in the inspector."); 
+        //}
     }
     protected override void PickMe(Character characterToChange)
     {
@@ -34,15 +43,31 @@ public class WeaponPickUp : PickUp
 
     public IEnumerator PowerUpSequence(Player player)
     {
-        //This stores the old weapon 
+        //This stores the old weapon and set it to the old sprite 
         Weapon oldWeapon = player.GetCurrentWeapon();
+        //Sprite oldSprite = spriteRenderer.sprite;
+
         //Soft Disable 
-        //SpriteRanderer.SetActive(false);
-        //Active 
-        ActivateWeaponChange(player); 
+        spriteRendererObject.SetActive(false);
+
+        //Active and changes the sprite to the new weapon
+        ActivateWeaponChange(player);
+        //if(newWeapon.weaponSprite != null)
+        //{
+        //    Debug.Log("Changing sprite to new weapon sprite."); 
+        //    spriteRenderer.sprite = newWeapon.weaponSprite;
+        //}
+        //else
+        //{
+        //    Debug.LogError("New weapon sprite is null."); 
+        //}
+         
+
         yield return new WaitForSeconds(weaponChangeDuration);
+
         //Deactivate 
         DeactivateWeaponChange(player, oldWeapon);
+        //spriteRenderer.sprite = oldSprite; 
 
 
         Destroy(gameObject);
