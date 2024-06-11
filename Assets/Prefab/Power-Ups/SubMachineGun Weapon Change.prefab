@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newWeapon: {fileID: 11400000, guid: f28475f80f780d347b7ed127872e08af, type: 2}
-  weaponChangeDuration: 5
-  spriteRendererObject: {fileID: 8770584958461692353}
+  weaponChangeDuration: 6
 --- !u!212 &8939940923146088781
 SpriteRenderer:
   m_ObjectHideFlags: 0

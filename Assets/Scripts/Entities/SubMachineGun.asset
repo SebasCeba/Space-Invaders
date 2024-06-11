@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SubMachineGun
   m_EditorClassIdentifier: 
   weaponName: SubMachineGun
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3e3b0924f7cd2cf4c8e1205e3e2f9044, type: 3}
+  weaponIndex: 1
   bulletReference: {fileID: 5734802423308558225, guid: fe9bda448c2d1784db6e26dcb5631dd7, type: 3}
   damage: 5

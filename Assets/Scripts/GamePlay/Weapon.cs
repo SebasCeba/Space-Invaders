@@ -12,7 +12,8 @@ public class Weapon : ScriptableObject
     private string weaponName;
     [SerializeField]
     private Sprite icon;
-    public Sprite weaponSprite; 
+    [SerializeField]
+    private int weaponIndex; 
 
     [Header("---Bullet---")]
     [SerializeField]
@@ -40,5 +41,10 @@ public class Weapon : ScriptableObject
     public Weapon(Bullet bulletPrefab)
     {
         bulletReference = bulletPrefab; 
+    }
+
+    public int GetWeaponIndex()
+    {
+        return weaponIndex;
     }
 }
