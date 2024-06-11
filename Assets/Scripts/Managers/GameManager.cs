@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,18 +36,15 @@ public class GameManager : MonoBehaviour
             audioManager = gameObject.AddComponent<AudioManager>();
         }
     }
-
     // Update is called once per frame
     void Update()
     {
 
     }
-
     public void StartSpawningEnemy()
     {
         StartCoroutine(SpawnEnemy());
     }
-
     public IEnumerator SpawnEnemy()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
@@ -69,20 +65,16 @@ public class GameManager : MonoBehaviour
             //enemies.SetUpEnemy(5);     
         }
     }
-
     public void EnemyKilled(Enemy killed)
     {
         //Removing frome a list  
         eneimesSpawned.Remove(killed);
     }
-
-
     public void StopSpawning()
     {
         StopAllCoroutines();
         scoreManager.RegisterHighScore(); 
     }
-
     public void EndGame()
     {
         scoreManager.RegisterHighScore();
