@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326015522919973969, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
       propertyPath: bulletSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2433541252350226113, guid: 173c347b1974208429d2bf265cb0bf76, type: 3}
       propertyPath: m_LocalScale.x
